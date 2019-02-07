@@ -1,0 +1,160 @@
+/**
+Donald Elrod
+824006067
+CSCE 463 - Spring 2019
+*/
+
+#include "pch.h"
+#define _WINSOCK_DEPRECATED_NO_WARNINGS
+#include "Socket.h"
+
+const int INITIAL_BUF_SIZE = 8192;
+
+using namespace std;
+
+//some code adapted from sample code (AFSC), will be marked with the following:
+// **AFSC**
+
+Socket::Socket()
+{
+	WSADATA wsaData;
+	WORD wVersionRequested = MAKEWORD(2, 2);
+	if (WSAStartup(wVersionRequested, &wsaData) != 0) {
+		printf("WSAStartup error %d\n", WSAGetLastError());
+		WSACleanup();
+		return;
+	}
+
+	// allocate this buffer once, then possibly reuse for multiple connections in Part 3
+	buf = new char[INITIAL_BUF_SIZE]; // start with 8 KB
+	sock = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
+
+	// *AFSC* //
+	if (sock == INVALID_SOCKET) {
+		printf("socket() generated error %d\n", WSAGetLastError());
+		WSACleanup();
+		return;
+	}
+
+	allocatedSize = INITIAL_BUF_SIZE;
+}
+
+bool Socket::SendRequest(ParsedURL url) {
+	// *AFSC* //
+	cout << "\t  Doing DNS...";
+	
+	//the timing code I adapted from stackoverflow
+	//https://stackoverflow.com/questions/3220477/how-to-use-clock-in-c
+
+	clock_t timer;
+	double duration;
+	timer = clock();
+
+	DWORD IP = inet_addr(url.host.c_str());
+	if (IP == INADDR_NONE) {
+		if ((remote = gethostbyname(url.host.c_str())) == NULL) {
+
+			//cout << "Invalid host: not FQDM or IP address" << endl;
+			return false;
+		}
+		else memcpy((char*)&(server.sin_addr), remote->h_addr, remote->h_length);
+	}
+	else server.sin_addr.S_un.S_addr = IP;
+
+	duration = (clock() - timer) / (double)CLOCKS_PER_SEC;
+
+	printf("done in %.1f ms, found %s\n", duration*1000, inet_ntoa(server.sin_addr));
+
+	server.sin_family = AF_INET;
+	server.sin_port = htons(url.port);
+
+	cout << "\t* Connecting on page...";
+
+	timer = clock();
+
+	if (connect(sock, (struct sockaddr*)&server, sizeof(struct sockaddr_in)) == SOCKET_ERROR) {
+		cout << "failed with " << WSAGetLastError() << endl;
+		return false;
+	}
+
+	duration = (clock() - timer) / (double)CLOCKS_PER_SEC;
+
+	printf("done in %.1f ms\n", duration*1000);
+	
+	string request = url.generateRequest();
+
+	if (send(sock, request.c_str(), strlen(request.c_str())+1, 0) == SOCKET_ERROR) {
+		cout << "Send error: " << WSAGetLastError() << endl;
+		return false;
+	}
+	return true;
+}
+
+bool Socket::Read(void)
+{
+	// set timeout to 10 seconds
+	//const timeval timeout = { 10, 0 };
+
+	clock_t timer;
+	double duration;
+
+	timeval timeout;
+	timeout.tv_sec = 10;
+	timeout.tv_usec = 0;
+	int curPos = 0;
+	fd_set readset;
+	int ret;
+
+	cout << "\t  Loading...";
+
+	timer = clock();
+
+	while (true) {
+		
+		// wait to see if socket has any data (see MSDN)
+		
+		//timeout.tv_sec = 10;
+		//timeout.tv_usec = 0;
+		
+		FD_ZERO(&readset);
+		FD_SET(sock, &readset);
+		
+		if ((ret = select(1, &readset, 0, 0, &timeout)) > 0) {
+			// new data available; now read the next segment
+			int bytes = recv(sock, buf + curPos, allocatedSize - curPos, 0);
+			if (bytes < 0) {
+				cout << WSAGetLastError() << endl;
+				break;
+			}
+			if (bytes == 0) {
+				// NULL-terminate buffer
+				buf[curPos + 1] = '\0';
+				duration = (clock() - timer) / (double)CLOCKS_PER_SEC;
+				printf("done in %.1f ms with %d bytes\n", duration*1000, curPos);
+				//closesocket(sock);
+				return true; // normal completion
+			}
+			curPos += bytes; // adjust where the next recv goes
+			if (allocatedSize - curPos < 1024) {
+				// resize buffer; besides STL, you can use
+				// realloc(), HeapReAlloc(), or memcpy the buffer
+				// into a bigger array
+				char* newBuf = new char[allocatedSize * 2];
+				memcpy(newBuf, buf, allocatedSize);
+				allocatedSize *= 2;
+				delete buf;
+				buf = newBuf;
+			}
+
+		}
+		else if (ret == 0) {
+			cout << "Connection timed out" << endl;
+			break;
+		}
+		else {
+			cout << "connection error: " << WSAGetLastError() << endl;
+			break;
+		}
+	}
+	return false;
+}
