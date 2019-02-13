@@ -1,0 +1,15 @@
+﻿  source.cpp
+c:\users\delrod19\documents\csce463-hw1.3\csce463-hw1.3\source.cpp(187): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+c:\users\delrod19\documents\csce463-hw1.3\csce463-hw1.3\source.cpp(217): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+c:\users\delrod19\documents\csce463-hw1.3\csce463-hw1.3\source.cpp(238): warning C4267: '+=': conversion from 'size_t' to 'volatile long', possible loss of data
+c:\users\delrod19\documents\csce463-hw1.3\csce463-hw1.3\source.cpp(245): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+c:\users\delrod19\documents\csce463-hw1.3\csce463-hw1.3\source.cpp(283): warning C4267: '+=': conversion from 'size_t' to 'volatile long', possible loss of data
+c:\users\delrod19\documents\csce463-hw1.3\csce463-hw1.3\source.cpp(289): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\users\delrod19\documents\csce463-hw1.3\csce463-hw1.3\source.cpp(166): warning C4101: '_errno': unreferenced local variable
+c:\users\delrod19\documents\csce463-hw1.3\csce463-hw1.3\source.cpp(445): warning C4477: 'printf' : format string '%d' requires an argument of type 'int', but variadic argument 2 has type 'double'
+c:\users\delrod19\documents\csce463-hw1.3\csce463-hw1.3\source.cpp(446): warning C4477: 'printf' : format string '%d' requires an argument of type 'int', but variadic argument 2 has type 'double'
+c:\users\delrod19\documents\csce463-hw1.3\csce463-hw1.3\source.cpp(447): warning C4477: 'printf' : format string '%d' requires an argument of type 'int', but variadic argument 2 has type 'double'
+c:\users\delrod19\documents\csce463-hw1.3\csce463-hw1.3\source.cpp(448): warning C4477: 'printf' : format string '%d' requires an argument of type 'int', but variadic argument 2 has type 'double'
+c:\users\delrod19\documents\csce463-hw1.3\csce463-hw1.3\source.cpp(448): warning C4477: 'printf' : format string '%.2f' requires an argument of type 'double', but variadic argument 3 has type 'long'
+c:\users\delrod19\documents\csce463-hw1.3\csce463-hw1.3\source.cpp(449): warning C4477: 'printf' : format string '%d' requires an argument of type 'int', but variadic argument 2 has type 'double'
+  CSCE463-HW1.3.vcxproj -> C:\Users\delrod19\Documents\CSCE463-HW1.3\x64\Debug\source.cpp.exe
