@@ -1,12 +1,26 @@
-﻿  ParsedURL.cpp
+﻿  pch.cpp
+  ParsedURL.cpp
+  Socket.cpp
+\\tsclient\d\projects\csce463-hw\hw1 - webcrawler\hw1.3\csce463-hw1.3\socket.cpp(163): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+\\tsclient\d\projects\csce463-hw\hw1 - webcrawler\hw1.3\csce463-hw1.3\socket.cpp(192): warning C4244: '-=': conversion from 'double' to 'long', possible loss of data
+\\tsclient\d\projects\csce463-hw\hw1 - webcrawler\hw1.3\csce463-hw1.3\socket.cpp(175): warning C4101: 'duration': unreferenced local variable
+  source.cpp
+\\tsclient\d\projects\csce463-hw\hw1 - webcrawler\hw1.3\csce463-hw1.3\source.cpp(218): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+\\tsclient\d\projects\csce463-hw\hw1 - webcrawler\hw1.3\csce463-hw1.3\source.cpp(247): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+\\tsclient\d\projects\csce463-hw\hw1 - webcrawler\hw1.3\csce463-hw1.3\source.cpp(274): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+\\tsclient\d\projects\csce463-hw\hw1 - webcrawler\hw1.3\csce463-hw1.3\source.cpp(318): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+\\tsclient\d\projects\csce463-hw\hw1 - webcrawler\hw1.3\csce463-hw1.3\source.cpp(195): warning C4101: '_errno': unreferenced local variable
+\\tsclient\d\projects\csce463-hw\hw1 - webcrawler\hw1.3\csce463-hw1.3\source.cpp(364): warning C4244: '=': conversion from 'UINT64' to 'long', possible loss of data
+\\tsclient\d\projects\csce463-hw\hw1 - webcrawler\hw1.3\csce463-hw1.3\source.cpp(379): warning C4477: 'printf' : format string '%s' requires an argument of type 'char *', but variadic argument 10 has type 'std::string'
+\\tsclient\d\projects\csce463-hw\hw1 - webcrawler\hw1.3\csce463-hw1.3\source.cpp(393): warning C4244: 'initializing': conversion from 'UINT64' to 'double', possible loss of data
+\\tsclient\d\projects\csce463-hw\hw1 - webcrawler\hw1.3\csce463-hw1.3\source.cpp(407): warning C4244: '=': conversion from 'double' to 'long', possible loss of data
+  Generating Code...
   Generating code
-  0 of 40 functions ( 0.0%) were compiled, the rest were copied from previous compilation.
-    0 functions were new in current compilation
-    0 functions had inline decision re-evaluated but remain unchanged
+  All 40 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
   Finished generating code
-HTMLParser_release_x64.lib(HTMLParserBase.obj) : warning LNK4099: PDB 'HTMLParser.pdb' was not found with 'HTMLParser_release_x64.lib(HTMLParserBase.obj)' or at 'C:\Users\delrod19\Documents\CSCE463-HW1.3\x64\Release\HTMLParser.pdb'; linking object as if no debug info
-HTMLParser_release_x64.lib(stdafx.obj) : warning LNK4099: PDB 'HTMLParser.pdb' was not found with 'HTMLParser_release_x64.lib(stdafx.obj)' or at 'C:\Users\delrod19\Documents\CSCE463-HW1.3\x64\Release\HTMLParser.pdb'; linking object as if no debug info
-HTMLParser_release_x64.lib(IRLparser.obj) : warning LNK4099: PDB 'HTMLParser.pdb' was not found with 'HTMLParser_release_x64.lib(IRLparser.obj)' or at 'C:\Users\delrod19\Documents\CSCE463-HW1.3\x64\Release\HTMLParser.pdb'; linking object as if no debug info
-HTMLParser_release_x64.lib(IRLBuffer.obj) : warning LNK4099: PDB 'HTMLParser.pdb' was not found with 'HTMLParser_release_x64.lib(IRLBuffer.obj)' or at 'C:\Users\delrod19\Documents\CSCE463-HW1.3\x64\Release\HTMLParser.pdb'; linking object as if no debug info
-HTMLParser_release_x64.lib(URL.obj) : warning LNK4099: PDB 'HTMLParser.pdb' was not found with 'HTMLParser_release_x64.lib(URL.obj)' or at 'C:\Users\delrod19\Documents\CSCE463-HW1.3\x64\Release\HTMLParser.pdb'; linking object as if no debug info
-  CSCE463-HW1.3.vcxproj -> C:\Users\delrod19\Documents\CSCE463-HW1.3\x64\Release\CSCE463-HW1.3.exe
+HTMLParser_release_x64.lib(HTMLParserBase.obj) : warning LNK4099: PDB 'HTMLParser.pdb' was not found with 'HTMLParser_release_x64.lib(HTMLParserBase.obj)' or at '\\tsclient\D\Projects\CSCE463-HW\HW1 - Webcrawler\HW1.3\x64\Release\HTMLParser.pdb'; linking object as if no debug info
+HTMLParser_release_x64.lib(stdafx.obj) : warning LNK4099: PDB 'HTMLParser.pdb' was not found with 'HTMLParser_release_x64.lib(stdafx.obj)' or at '\\tsclient\D\Projects\CSCE463-HW\HW1 - Webcrawler\HW1.3\x64\Release\HTMLParser.pdb'; linking object as if no debug info
+HTMLParser_release_x64.lib(IRLparser.obj) : warning LNK4099: PDB 'HTMLParser.pdb' was not found with 'HTMLParser_release_x64.lib(IRLparser.obj)' or at '\\tsclient\D\Projects\CSCE463-HW\HW1 - Webcrawler\HW1.3\x64\Release\HTMLParser.pdb'; linking object as if no debug info
+HTMLParser_release_x64.lib(IRLBuffer.obj) : warning LNK4099: PDB 'HTMLParser.pdb' was not found with 'HTMLParser_release_x64.lib(IRLBuffer.obj)' or at '\\tsclient\D\Projects\CSCE463-HW\HW1 - Webcrawler\HW1.3\x64\Release\HTMLParser.pdb'; linking object as if no debug info
+HTMLParser_release_x64.lib(URL.obj) : warning LNK4099: PDB 'HTMLParser.pdb' was not found with 'HTMLParser_release_x64.lib(URL.obj)' or at '\\tsclient\D\Projects\CSCE463-HW\HW1 - Webcrawler\HW1.3\x64\Release\HTMLParser.pdb'; linking object as if no debug info
+  CSCE463-HW1.3.vcxproj -> \\tsclient\D\Projects\CSCE463-HW\HW1 - Webcrawler\HW1.3\x64\Release\CSCE463-HW1.3.exe
