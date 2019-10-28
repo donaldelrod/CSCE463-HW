@@ -1,0 +1,6 @@
+﻿  DNSLookup.cpp
+  Packet.cpp
+  Generating Code...
+DNSLookup.obj : error LNK2019: unresolved external symbol __imp__inet_addr@4 referenced in function "unsigned int __cdecl queryType(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (?queryType@@YAIV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z)
+Packet.obj : error LNK2019: unresolved external symbol __imp__htons@4 referenced in function "public: void __thiscall Packet::makePacket(unsigned short,unsigned short,unsigned short)" (?makePacket@Packet@@QAEXGGG@Z)
+D:\Projects\CSCE463-HW\HW2 - DNS Lookup\DNSLookup\Debug\DNSLookup.exe : fatal error LNK1120: 2 unresolved externals

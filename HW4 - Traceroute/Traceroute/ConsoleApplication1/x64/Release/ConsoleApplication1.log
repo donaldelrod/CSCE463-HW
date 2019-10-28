@@ -1,0 +1,10 @@
+﻿  traceroute.cpp
+d:\projects\csce463-hw\hw4 - traceroute\traceroute\consoleapplication1\traceroute.cpp(200): warning C4244: 'argument': conversion from 'DWORD' to 'u_short', possible loss of data
+d:\projects\csce463-hw\hw4 - traceroute\traceroute\consoleapplication1\traceroute.cpp(421): warning C4477: 'printf' : format string '%s' requires an argument of type 'char *', but variadic argument 2 has type 'std::string'
+d:\projects\csce463-hw\hw4 - traceroute\traceroute\consoleapplication1\traceroute.cpp(361): warning C4101: 'duration': unreferenced local variable
+  Generating code
+  1 of 118 functions ( 0.8%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  ConsoleApplication1.vcxproj -> D:\Projects\CSCE463-HW\HW4 - Traceroute\Traceroute\x64\Release\ConsoleApplication1.exe

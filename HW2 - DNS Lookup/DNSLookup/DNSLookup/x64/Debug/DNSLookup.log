@@ -1,0 +1,7 @@
+﻿  Packet.cpp
+d:\projects\csce463-hw\hw2 - dns lookup\dnslookup\dnslookup\packet.cpp(38): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+d:\projects\csce463-hw\hw2 - dns lookup\dnslookup\dnslookup\packet.cpp(39): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+d:\projects\csce463-hw\hw2 - dns lookup\dnslookup\dnslookup\packet.cpp(57): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+d:\projects\csce463-hw\hw2 - dns lookup\dnslookup\dnslookup\packet.cpp(77): warning C4244: '=': conversion from 'u_short' to 'char', possible loss of data
+d:\projects\csce463-hw\hw2 - dns lookup\dnslookup\dnslookup\packet.cpp(85): warning C4244: '=': conversion from 'u_short' to 'char', possible loss of data
+  DNSLookup.vcxproj -> D:\Projects\CSCE463-HW\HW2 - DNS Lookup\DNSLookup\x64\Debug\DNSLookup.exe

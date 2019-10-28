@@ -1,0 +1,25 @@
+﻿  SenderSocket.cpp
+d:\projects\csce463-hw\hw3 - reliable data transfer\part 2\rdt2\rdt2\sendersocket.h(56): warning C4068: unknown pragma
+d:\projects\csce463-hw\hw3 - reliable data transfer\part 2\rdt2\rdt2\sendersocket.cpp(103): warning C4244: 'argument': conversion from 'float' to 'long', possible loss of data
+d:\projects\csce463-hw\hw3 - reliable data transfer\part 2\rdt2\rdt2\sendersocket.cpp(122): warning C4244: 'argument': conversion from 'float' to 'long', possible loss of data
+d:\projects\csce463-hw\hw3 - reliable data transfer\part 2\rdt2\rdt2\sendersocket.cpp(131): warning C4099: 'SenderSynHeader': type name first seen using 'class' now seen using 'struct'
+  d:\projects\csce463-hw\hw3 - reliable data transfer\part 2\rdt2\rdt2\sendersocket.h(40): note: see declaration of 'SenderSynHeader'
+d:\projects\csce463-hw\hw3 - reliable data transfer\part 2\rdt2\rdt2\sendersocket.cpp(136): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+d:\projects\csce463-hw\hw3 - reliable data transfer\part 2\rdt2\rdt2\sendersocket.cpp(195): warning C4099: 'ReceiverHeader': type name first seen using 'class' now seen using 'struct'
+  d:\projects\csce463-hw\hw3 - reliable data transfer\part 2\rdt2\rdt2\sendersocket.h(45): note: see declaration of 'ReceiverHeader'
+d:\projects\csce463-hw\hw3 - reliable data transfer\part 2\rdt2\rdt2\sendersocket.cpp(202): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+d:\projects\csce463-hw\hw3 - reliable data transfer\part 2\rdt2\rdt2\sendersocket.cpp(203): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+d:\projects\csce463-hw\hw3 - reliable data transfer\part 2\rdt2\rdt2\sendersocket.cpp(216): warning C4099: 'SenderSynHeader': type name first seen using 'class' now seen using 'struct'
+  d:\projects\csce463-hw\hw3 - reliable data transfer\part 2\rdt2\rdt2\sendersocket.h(40): note: see declaration of 'SenderSynHeader'
+d:\projects\csce463-hw\hw3 - reliable data transfer\part 2\rdt2\rdt2\sendersocket.cpp(219): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+d:\projects\csce463-hw\hw3 - reliable data transfer\part 2\rdt2\rdt2\sendersocket.cpp(278): warning C4099: 'ReceiverHeader': type name first seen using 'class' now seen using 'struct'
+  d:\projects\csce463-hw\hw3 - reliable data transfer\part 2\rdt2\rdt2\sendersocket.h(45): note: see declaration of 'ReceiverHeader'
+d:\projects\csce463-hw\hw3 - reliable data transfer\part 2\rdt2\rdt2\sendersocket.cpp(284): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+d:\projects\csce463-hw\hw3 - reliable data transfer\part 2\rdt2\rdt2\sendersocket.cpp(296): warning C4099: 'SenderDataPacket': type name first seen using 'class' now seen using 'struct'
+  d:\projects\csce463-hw\hw3 - reliable data transfer\part 2\rdt2\rdt2\sendersocket.h(51): note: see declaration of 'SenderDataPacket'
+d:\projects\csce463-hw\hw3 - reliable data transfer\part 2\rdt2\rdt2\sendersocket.cpp(350): warning C4099: 'ReceiverHeader': type name first seen using 'class' now seen using 'struct'
+  d:\projects\csce463-hw\hw3 - reliable data transfer\part 2\rdt2\rdt2\sendersocket.h(45): note: see declaration of 'ReceiverHeader'
+d:\projects\csce463-hw\hw3 - reliable data transfer\part 2\rdt2\rdt2\sendersocket.cpp(360): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+d:\projects\csce463-hw\hw3 - reliable data transfer\part 2\rdt2\rdt2\sendersocket.cpp(321): warning C4101: 'duration': unreferenced local variable
+d:\projects\csce463-hw\hw3 - reliable data transfer\part 2\rdt2\rdt2\sendersocket.cpp(390): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  RDT2.vcxproj -> D:\Projects\CSCE463-HW\HW3 - Reliable Data Transfer\Part 2\RDT2\x64\Debug\RDT2.exe
